@@ -47,10 +47,10 @@ return false;
 }
 
 //my code above
-public String reverse(String str){
-  //  String sNew = new String();
-    for(int i = sWord.length()-1; i >=0; i--){
-      str += sWord.charAt(i);
+public String reverse(String word){
+    String str = new String();
+    for(int i = word.length()-1; i >=0; i--){
+      str += word.charAt(i);
   }
   return str;
 }
