@@ -35,27 +35,45 @@ public void tester()
     }
   }
 }
-public boolean palindrome(String sWord){
-      String str = "";
-  for(int i = sWord.length()-1; i >=0; i--){
-      str += sWord.charAt(i);
+public void setup()
+{
+  String lines[] = loadStrings("palindromes.txt");
+  System.out.println("there are " + lines.length + " lines");
+  for (int i=0; i < lines.length; i++) 
+  {
+    if(palindrome(lines[i])==true)
+    {
+      System.out.println(lines[i] + " IS a palindrome.");
+    }
+    else
+    {
+      System.out.println(lines[i] + " is NOT a palindrome.");
+    }
   }
-if (sWord.equals(str)){
-  return true;
 }
-return false;
-}
-
-//my code above
-public String reverse(String word){
-    String str = new String();
-    for(int i = word.length()-1; i >=0; i--){
-      str += word.charAt(i);
+public String onlyLetters(String sString){
+ String str = "";
+  for(int i = 0; i < sString.length(); i++){
+    if(Character.isLetter(sString.charAt(i)) == true){
+      str += sString.charAt(i);
+    }
   }
   return str;
 }
-  //your code here
- ///   return sNew;
+public boolean palindrome(String sWord) {
+ String jword = onlyLetters(sWord).toLowerCase();
+  String reversedWord = reverse(jword);
+  return jword.equals(reversedWord);
+}
+
+public String reverse(String word) {
+  String str = new String();
+  for (int i = word.length() - 1; i >= 0; i--) {
+    str += word.charAt(i);
+  }
+  return str;
+}
+
 
   
 }
