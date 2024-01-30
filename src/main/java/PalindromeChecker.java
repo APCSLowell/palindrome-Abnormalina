@@ -51,29 +51,30 @@ public void setup()
     }
   }
 }
-public String onlyLetters(String sString){
- String str = "";
-  for(int i = 0; i < sString.length(); i++){
-    if(Character.isLetter(sString.charAt(i)) == true){
-      str += sString.charAt(i);
-    }
-  }
-  return str;
-}
+
 public boolean palindrome(String sWord) {
- String jword = onlyLetters(sWord).toLowerCase();
-  String reversedWord = reverse(jword);
-  return jword.equals(reversedWord);
+    String str = "";
+  for(int i = sWord.length()-1; i >=0; i--){
+      str += sWord.charAt(i);
+  }
+  str= str.toLowerCase();
+if (str.equals(reverse(sWord)){
+  return true;
+}
+return false;
 }
 
 public String reverse(String word) {
   String str = new String();
   for (int i = word.length() - 1; i >= 0; i--) {
+    if(Character.isLetter(str.charAt(i))){
     str += word.charAt(i);
   }
-  return str;
+
 }
-
-
+str = str.toLowerCase();
+return str;
   
 }
+}
+
