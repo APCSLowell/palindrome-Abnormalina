@@ -7,7 +7,7 @@ public void tester()
 {
  // String lines[] = loadStrings("palindromes.txt");
   String lines[] = {"test", "rotator", "rewriter", "nurses run", "Madam, I'm Adam!", "A Man! A Plan! A Canal! Panama!"}
-  String[] lines = new String[6]; 
+ // String[] lines = new String[6]; 
     try{
         File myFile = new File("palindromes.txt");
         Scanner myReader = new Scanner(myFile);
