@@ -5,7 +5,8 @@ import java.util.Scanner; // Import the Scanner class to read text files
 public class PalindromeChecker {
 public void tester()
 {
-  String lines[] = loadStrings("palindromes.txt");
+ // String lines[] = loadStrings("palindromes.txt");
+  String lnes[] = {"test", "rotator", "rewriter", "nurses run", "Madam, I'm Adam!", "A Man! A Plan! A Canal! Panama!"}
   String[] lines = new String[6]; 
     try{
         File myFile = new File("palindromes.txt");
